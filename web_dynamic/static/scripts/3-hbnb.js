@@ -1,5 +1,6 @@
 
 $('document').ready(function () {
+    const api = 'http://' + window.location.hostname;
     const url = 'http://' + window.location.hostname + ':5001/api/v1/status/';
   $.get(url, function (response) {
     if (response.status === 'OK') {
@@ -30,8 +31,6 @@ $('document').ready(function () {
           ${place.description}
             </div>
       </article>`;
-
-
 
     }));
     }
