@@ -2,13 +2,15 @@
 $('document').ready(function () {
     const api = 'http://' + window.location.hostname;
     const url = 'http://' + window.location.hostname + ':5001/api/v1/status/';
-  $.get(url, function (response) {
+
+    $.get(url, function (response) {
     if (response.status === 'OK') {
       $('DIV#api_status').addClass('available');
     } else {
       $('DIV#api_status').removeClass('available');
     }
   });
+
   $.ajax({
     url: api + ':5001/api/v1/places_search/',
     type: 'POST',
