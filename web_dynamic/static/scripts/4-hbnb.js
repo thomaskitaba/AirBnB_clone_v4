@@ -32,7 +32,7 @@ $('document').ready(function () {
       }
     });
 
-    $('BUTTON').click(function () {
+    $('BUTTON[name="filters"]').click(function () {
       $.ajax({
         url: api + ':5001/api/v1/places_search/',
         type: 'POST',
