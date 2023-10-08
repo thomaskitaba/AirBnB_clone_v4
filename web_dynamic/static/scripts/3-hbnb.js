@@ -3,7 +3,7 @@ $('document').ready(function () {
     const api = 'http://' + window.location.hostname;
     const url = 'http://' + window.location.hostname + ':5001/api/v1/status/';
 
-    $.get(url, function (response) {
+    $.get(api + ':5001/api/v1/status/', function (response) {
     if (response.status === 'OK') {
       $('DIV#api_status').addClass('available');
     } else {
@@ -36,7 +36,7 @@ $('document').ready(function () {
 
     }));
 
-    
+
     }
   });
     let amenities = {};
