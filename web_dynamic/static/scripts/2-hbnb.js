@@ -1,6 +1,7 @@
 
 $('document').ready(function () {
-    const url = 'http://' + window.location.hostname + ':5001/api/v1/status/';
+    const HOST = "54.173.67.36";
+    const url = 'http://' + HOST + ':5001/api/v1/status/';
     // const url = 'http://127.0.0.1:5001/api/v1/status/';
   $.get(url, function (response) {
     if (response.status === 'OK') {
