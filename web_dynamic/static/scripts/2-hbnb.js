@@ -2,7 +2,7 @@
 $('document').ready(function () {
     // const HOST = "54.173.67.36";
     // const url = 'http://' + HOST + ':5001/api/v1/status/';
-    const url = 'http://54.173.67.36:5001/api/v1/status/';
+    const url = 'http://34.229.69.114:5001/api/v1/status/';
   $.get(url, function (response) {
     if (response.status === 'OK') {
       $('DIV#api_status').addClass('available');
@@ -20,5 +20,4 @@ $('document').ready(function () {
       }
       $('.amenities H4').text(Object.values(amenities).join(', '));
     });
-    $()
   });
